@@ -1,8 +1,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin-bottom: 5rem;
     background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
     
 }
 
@@ -12,7 +13,6 @@ header {
     z-index: 10;
     position: relative;
     height: 42rem;
-    width: 100%;
     background: linear-gradient(to right, #00c6ff, #0072ff); 
     padding: 10px 0;
     text-align: center;
@@ -51,25 +51,31 @@ nav a {
 
 @media screen and (max-width: 600px) {
     header {
-        grid-template-columns: 100%;
-        height: auto;
+
+        /* grid-template-columns: 100%; */
+        height: 40px;
         background: black;
     }
     .logo {
+        
+        width: 92vw;
+        display: flex;
+        justify-content: space-between;
         text-align: center;
-        padding: 2vh 4vh;
+        padding: 1rem;
+
+    
         i{
             display: block;
+            
         }
     }
     nav {
         text-align: center;
-        padding: 2vh;
+        /* padding: 2vh; */
         display: none;
     }
-    nav a {
-        margin: 10px 0;
-    }
+   
 }
 
 
@@ -137,20 +143,30 @@ nav a {
     
   
 }
+@media screen and (max-width: 600px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}
+
 
 
 @media screen and (max-width: 600px) {
 .hero-section {
-        width: 100vw;
+      
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 1rem;
+        background-color: whitesmoke;
     img {        
         width: 90%;
+
     }
     .intro-text {
         width: 100%;
     }
+   
   
     }
 }
@@ -185,37 +201,42 @@ nav a {
 .about-text{
     width: 50%;
 }
-.about-more{
-    width: 50%;
-    justify-content: center;
 
-}
 .about-figures{
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     text-align: center;
     text-align: justify;
+    justify-content: space-between
+
+    
+    
 
 }
 .about3{
     padding: 1rem;
     background-color: transparent;
-    border: solid;
+    border: solid rgb(139, 133, 133);
    
 }
 
+.about-more{
+    width: 50%;
+    justify-content: center;
+
+}
 
 
 .progress-bar-container {
     background-color: #e0e0e0; 
-    border-radius: 10px; 
+    border-radius: 1.2rem; 
     border: solid white;
     margin-bottom: 2rem;
   }
   
   .progress-bar {
-    height: 1.1rem;
-    border-radius: 10px; 
+    height: 1rem;
+    border-radius: 1.2rem; 
     transition: width 1s ease-in-out; 
   }
   
@@ -231,16 +252,18 @@ nav a {
             flex-direction: column;
             padding: 10px 5px;
             margin-top: 30px;
-    background: linear-gradient(to bottom, #d2d2d2, #ffffff); 
+             background: linear-gradient(to bottom, #faf7f7, #ffffff); 
+
             .about-text{
                 width: 100%;
+                
+                
             }
-        h1 {
-            width: 100%;
-        }
-        p {
-            width: 100%;
-        }
+            h1{
+                font-size: large;
+                font-weight: 900;
+            }
+       
         .about-figures{
             display: flex;
             flex-direction: column;
@@ -249,6 +272,11 @@ nav a {
         }
       
         }
+    .about-more{
+        width: 90%;
+        
+    }
+   
     }
 
 
@@ -265,7 +293,7 @@ nav a {
 /* SERVICES */
 
 .services{
-    padding: 20vh;
+    padding: 18vh;
     text-align: center;   
     background-color: rgb(231, 237, 244);
 }
@@ -275,7 +303,7 @@ nav a {
 }
 
 
-.service > div {
+.threebox {
     background-color: white;
     margin: 5vh;
     padding: 3vh;
@@ -294,12 +322,6 @@ nav a {
     .services {
         display: flex;
         flex-direction: column;
-    h1 {
-        
-        width: 100%;
-    }
-    p {
-        width: 100%;
     }
     .service{
         display: flex;
@@ -308,7 +330,16 @@ nav a {
 
     }
   
+       
+    
+  
     }
+    .threebox{
+        text-align: start;
+        h1{
+            width: 90%;
+            font-size: small;
+        }
 }
 
 
@@ -332,9 +363,16 @@ nav a {
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 100px;
+
     
 }
-
+.button-f{
+    background: linear-gradient(to right, #00c6ff, #0072ff); 
+    border: none;
+    width: 20%;
+    height: 2rem;
+    
+}
 .projects nav-bar {
     margin: 1em 0;
 }
@@ -350,10 +388,12 @@ nav a {
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
     padding: 20px;
+  
 }
 .card {
     margin: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color:whitesmoke;
+    border-radius: 5rem;
 
 
 }
@@ -363,37 +403,53 @@ nav a {
     width: 100%;
 }
 .card p {
-    padding: 1em;
+    /* padding: 1em; */
+    opacity: 0.5;
 }
 
 
-.projects load-more {
+/* .projects load-more {
     font-size: 1em;
     background-color: #000;
     color: #fff;
     border: none;
     cursor: pointer;
-}
+} */
 @media screen and (max-width: 600px) {
 
 
     .featured-products {
         display: flex;
         flex-direction: column;
-    h1 {
-        
-        width: 100%;
+        text-align: center;
     }
-    p {
-        width: 100%;
+    
+   
+    .button-f{
+        background: linear-gradient(to right, #00c6ff, #0072ff); 
+        border: none;
+        width: 50%;
+        height: 2.5rem;
+        text-align: center;
+        margin: auto;
+
+        
     }
     .card-container{
         display: flex;
         flex-direction: column;
         
-
-    }
   
+    }
+
+    .nav-bar{
+        width: 100%;
+        a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 0.5em;
+    
+    } 
     }
 }
 
@@ -412,6 +468,8 @@ nav a {
 
 
 /*    TESTIMONIALS     */
+
+
 .testimonials {
     padding: 8rem 5rem;
     text-align: center; 
@@ -433,29 +491,25 @@ nav a {
 
 }
 
+
 @media screen and (max-width: 600px) {
 
 
     .testimonials {
         display: flex;
         flex-direction: column;
-    h1 {
-        
-        width: 100%;
-    }
-    p {
-        width: 100%;
+        padding: auto auto;
+        text-align: center; 
+        background-color: rgb(231, 237, 244);
+    
+   
+  
     }
     .testimon{
         display: flex;
         flex-direction: column;
         
 
-    }
-    .testimon >div{
-        width: 100%;
-    }
-  
     }
 }
 
@@ -474,18 +528,26 @@ footer {
     color: #fff;
     text-align: justify;
     padding: 10px 0;
-    display: flex;
-    height: 20rem;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+
    
 }
 footer > div{
-    width: 33.33%;
-    margin: 2rem;
+  margin: 2rem;
+   
 
   p{
-    text-align: justify;
-    padding: 1rem;
+    text-align: start;
     
+    
+  }
+  input{
+    width: 80%;
+    background-color: transparent;
+    border-color: #b0a3a3;
+   border-radius: 2rem;
+   height: auto;
   }
     
 }
@@ -497,21 +559,8 @@ footer > div{
     footer {
         display: flex;
         flex-direction: column;
-    h1 {
-        
-        width: 100%;
-    }
-    p {
-        width: 100%;
-    }
-    .div{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        
-
-    }
+  
+   
   
     }
 }
